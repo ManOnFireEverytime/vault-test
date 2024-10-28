@@ -1,0 +1,78 @@
+.about__us {
+    padding-top: 100px;
+    text-align: center;
+    
+    h5 {
+        color: $color-stroke;
+    }
+
+    .about__video {
+        margin-top: 32px;
+        border-radius: 40px;
+        aspect-ratio: 2/1;
+        width: 100%;
+        background: url('~/assets/images/about-vid-img.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @include media('<phone') {
+            border-radius: 10px;
+        }
+    }
+
+    .mission__notes {
+        margin-top: 40px;
+        padding: 20px;
+
+        h4 {
+            margin-bottom: 16px;
+        }
+
+        .line {
+            width: 1px;
+            background-color: $color-cadet-white;
+            height: 50%;
+        }
+
+        .col-11 {
+            text-align: left;
+            // padding-left: 16px;
+
+            h5 {
+                margin-bottom: 16px;
+                color: $color-white;
+                position: relative;
+                top: 3px;
+            }
+
+            h6 {
+                color: $color-stroke;
+            }
+        }
+
+        .row {
+            margin-bottom: 24px;
+        }
+    }
+}
+
+.still__got {
+    width: 100%;
+
+    .row {
+        width: 90%;
+        max-width: 480px;
+        .col-6 {
+            &:nth-of-type(1) {
+                color: $color-green;
+                font-weight: 500;
+            }
+            &:nth-of-type(2) {
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+
+        margin-bottom: 32px;
+    }
+}

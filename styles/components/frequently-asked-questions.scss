@@ -1,0 +1,37 @@
+.faq {
+    margin: 50px 16px 30px;
+
+    h5 {
+        color: $color-stroke;
+    }
+
+    h2 {
+        margin-bottom: 50px;
+    }
+
+    .questions {
+        .question {
+            border-radius: 5px;
+            border: 1px solid $color-dark-green;
+            width: 90%;
+            max-width: 480px;
+            padding: 16px 5px;
+            text-align: left;
+            background-color: rgba($color: #FFF, $alpha: 0.05);
+            cursor: pointer;
+            margin-bottom: 7px;
+            
+            p {
+                margin-top: 10px;
+                color: $color-stroke;
+                font-weight: 500;
+            }
+
+            .arrow {
+                img {
+                    transform: scale(0.7);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,206 @@
+.hero {
+    height: 100vh;
+    background: url('~/assets/images/hero.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .container {
+        position: relative;
+        padding-top: 80px;
+        height: 100%;
+    }
+
+    .hero__content {
+        padding-top: 25vh;
+
+        @include media('<phone') {
+            padding-top: 10vh;
+        }
+
+        @include media('<small') {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        p {
+            padding-top: 16px;
+            line-height: 20px;
+            padding-bottom: 16px;
+            width: 70%;
+        }
+
+        .hero__card__div {
+            width: 350px;
+            aspect-ratio: 4/1;
+            position: absolute;
+            bottom: 50px;
+            right: 0;
+
+            @include media('<phone') {
+                padding-right: 0;
+                position: absolute;
+                bottom: 10px;
+            }
+
+            @include media('<small') {
+                bottom: 30px;
+                right: 10px;
+                width: 80%;
+            }
+
+            .hero__card {
+                background: rgba(129, 216, 208, 0.4);
+                border: 0.2px solid $color-cadet-white;
+                backdrop-filter: blur(15px);
+                border-radius: 10px;
+                padding: 16px;
+                width: 100%;
+                position: relative;
+
+                @include media('<phone') {
+                    // width: 60%;
+                }
+
+                .hero__card__small__div {
+                    small {
+                        font-size: 9px;
+                    }
+                }
+
+                p { 
+                    padding-top: 0;
+                    font-size: 14px;
+                    padding-bottom: 0;
+                }
+
+                button {
+                    padding: 8px;
+                    width: 100%;
+                    font-size: 9px;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
+
+.partners__section {
+    padding: 50px 0;
+    text-align: center;
+
+    h5 {
+        color: $color-stroke;
+    }
+
+    .marquees {
+        margin-top: 30px;
+        font-size: 0;
+
+        .marquee {
+            margin-bottom: 20px;
+            display: flex;
+            overflow: hidden;
+            user-select: none;
+            white-space: nowrap;
+            animation: moveSlideshow 20s linear infinite;
+            width: max-content;
+
+            &:nth-of-type(2) {
+                animation: moveOppositeSlideshow 20s linear infinite;
+            }
+
+            .marquee__card {
+                border: 1px solid $color-stroke;
+                background-color: $color-dark-green;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 24px 48px;
+                margin-right: 16px;
+                height: 90px;
+                width: 180px;
+                border-radius: 10px;
+                flex-shrink: 0;
+            }
+
+            @keyframes moveSlideshow {
+                100% { 
+                  transform: translateX(-1764px);  
+                }
+            }
+
+            @keyframes moveOppositeSlideshow {
+                0% { 
+                  transform: translateX(-1764px);  
+                }
+            }
+        }
+    }
+}
+
+.products__section {
+    padding: 50px 32px;
+    text-align: center;
+
+    h5 {
+        color: $color-stroke;
+    }
+
+    .products {
+        margin-top: 24px;
+
+    }
+
+    .button__div {
+        margin-top: 40px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.get__notified {
+    height: 100vh;
+    background: url('~/assets/images/get-notified.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .get__notified__box {
+        background: rgba(17, 17, 17, 0.6);
+        backdrop-filter: blur(20px);
+        border-radius: 20px;
+        padding: 48px 64px;
+        text-align: center;
+        width: 50%;
+
+        @include media('<phone') {
+            width: 90%;
+            padding: 32px;
+        }
+
+        h6 {
+            margin-bottom: 70px;
+        }
+
+        h2 {
+            margin-bottom: 35px;
+        }
+
+        button {
+            margin-top: 16px;
+            width: 100%;
+        }
+    }
+}
+
+.index__page {
+    .button__div {
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: center;
+    }
+}

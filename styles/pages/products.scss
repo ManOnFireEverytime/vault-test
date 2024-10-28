@@ -1,0 +1,59 @@
+.all__products {
+    padding-top: 100px;
+    text-align: center;
+
+    h5 {
+        color: $color-stroke;
+    }
+
+    .tabs {
+        margin-top: 24px;
+        display: flex;
+        justify-content: space-evenly;
+        
+        @include media('<phone') {
+            overflow-x: scroll;
+        }
+        
+        .tab {
+            cursor: pointer;
+            padding: 10px 16px;
+            border-radius: 5px;
+
+            &.active {
+                border: 1px solid $color-green;
+            }
+        }
+    }
+
+    .products {
+        margin: 24px;
+
+        @include media('<phone') {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    }
+
+    .button__div {
+        margin-top: 40px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.known__for {
+    margin-top: 70px;
+    margin-bottom: 50px;
+    padding-left: 32px;
+    padding-right: 32px;
+    
+    h5 {
+        color: $color-stroke;
+    }
+
+    h2 {
+        margin-bottom: 24px;
+    }
+}

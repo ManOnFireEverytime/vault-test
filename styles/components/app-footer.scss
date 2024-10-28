@@ -1,0 +1,66 @@
+footer {
+    padding: 64px 16px;
+
+    .footer__logo {
+        img {
+            width: 50%;
+        }
+    }
+
+    .row{
+        &.links {
+            margin-top: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid $color-stroke;
+
+            h5 {
+                font-size: 16px;
+                margin-bottom: 12px;
+
+                @include media('<phone') {
+                    margin-top: 32px;
+                }
+            }
+
+            .footer__link {
+                line-height: 20px;
+                display: block;
+            }
+        }
+
+        p {
+            line-height: 24px;
+            padding-right: 32px;
+        }
+
+        &.footer__bottom {
+            padding-top: 40px;
+            align-items: center;
+
+            .social__networks {
+                display: flex;
+
+                .social__network {
+                    width: 40px;
+                    height: 40px;
+                    background-color: $color-black;
+                    border-radius: 10px;
+                    border: 1px solid $color-stroke;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: 16px;
+                }
+            }
+
+            .we__accept {
+                p {
+                    margin-top: 16px;
+                }
+                .payment__methods {
+                    margin-top: 16px;
+                }
+            }
+        }
+    }
+}

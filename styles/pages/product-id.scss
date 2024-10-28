@@ -1,0 +1,65 @@
+.product__id {
+    padding-top: 70px;
+
+    .left {
+        margin-bottom: 50px;
+
+        @include media('<phone') {
+            padding: 16px;
+            margin-bottom: 0;
+        }
+
+        .col-12 {
+            height: 30%;
+
+            img {
+                object-fit: cover;
+            }
+        }
+        .bottom__image {
+            padding-top: 16px;
+        }
+    }
+
+    .right {
+        padding: 80px 32px 0;
+        margin-bottom: 50px;
+
+        @include media('<phone') {
+            padding-top: 30px;
+            margin-top: 0;
+        }
+
+        h6.desc {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            color: $color-stroke;
+        }
+
+        h5.crimson-text {
+            margin-top: 16px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid $color-stroke;
+            margin-bottom: 54px;
+        }
+
+        .featuring {
+            padding-bottom: 10px;
+            border-bottom: 1px solid $color-stroke;
+            margin-bottom: 54px;
+            display: block;
+        }
+
+        button {
+            width: 100%;
+        }
+
+        .pills {
+            margin-top: 24px;
+
+            .mission__pill {
+                margin-bottom: 8px;
+            }
+        }
+    }
+}
