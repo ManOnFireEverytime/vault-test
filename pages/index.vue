@@ -496,7 +496,7 @@ export default {
     const fetchStreetwearProducts = async () => {
       try {
         const response = await fetch(
-          "https://www.thevaultldn.com/api/getProductByCategory.php?category=Streetwear"
+          "https://backend.thevaultldn.com/getProductByCategory.php?category=Streetwear"
         );
         const data = await response.json();
         if (data.status === "success") {

@@ -88,7 +88,7 @@ export default {
     async handleSignIn() {
       try {
         const response = await fetch(
-          "https://www.thevaultldn.com/api/signin.php",
+          "https://backend.thevaultldn.com/signin.php",
           {
             method: "POST",
             headers: {
@@ -120,7 +120,7 @@ export default {
 
       try {
         const response = await fetch(
-          "https://www.thevaultldn.com/api/getGoogleUser.php",
+          "https://backend.thevaultldn.com/getGoogleUser.php",
           {
             method: "POST",
             headers: {

@@ -118,7 +118,7 @@ export default {
   methods: {
     async handleSignup() {
       const response = await fetch(
-        "https://www.thevaultldn.com/api/signup.php",
+        "https://backend.thevaultldn.com/signup.php",
         {
           method: "POST",
           headers: {
@@ -145,7 +145,7 @@ export default {
     handleGoogleSignIn(googleUser) {
       const id_token = googleUser.credential;
 
-      fetch("https://www.thevaultldn.com/api/getGoogleUser.php", {
+      fetch("https://backend.thevaultldn.com/getGoogleUser.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

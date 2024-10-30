@@ -76,7 +76,7 @@ export default {
 
     const fetchProducts = async () => {
       const res = await fetch(
-        "https://www.thevaultldn.com/api/getAllProducts.php"
+        "https://backend.thevaultldn.com/getAllProducts.php"
       );
       const json = await res.json();
       products.value = json.data;
@@ -85,7 +85,7 @@ export default {
 
     const fetchCategories = async () => {
       const res = await fetch(
-        "https://www.thevaultldn.com/api/getCategories.php"
+        "https://backend.thevaultldn.com/getCategories.php"
       );
       const json = await res.json();
       categories.value = json.data;
@@ -95,7 +95,7 @@ export default {
       activeTab.value = index;
       try {
         const res = await fetch(
-          `https://www.thevaultldn.com/api/getProductsByCategory.php?id=${categoryId}`
+          `https://backend.thevaultldn.com/getProductsByCategory.php?id=${categoryId}`
         );
         const json = await res.json();
         if (json.status === "success") {
