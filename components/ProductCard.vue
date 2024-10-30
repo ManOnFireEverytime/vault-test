@@ -1,7 +1,7 @@
 <template>
   <div class="product__card">
     <img
-      :src="`http://localhost/vault/products/${product.image1}`"
+      :src="`https://www.thevaultldn.com/api/products/${product.image1}`"
       class="img-fluid"
       :alt="product.product_name"
     />

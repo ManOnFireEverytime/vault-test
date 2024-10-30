@@ -87,16 +87,19 @@ export default {
   methods: {
     async handleSignIn() {
       try {
-        const response = await fetch("http://localhost/vault/signin.php", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            email: this.email,
-            password: this.password,
-          }),
-        });
+        const response = await fetch(
+          "https://www.thevaultldn.com/api/signin.php",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              email: this.email,
+              password: this.password,
+            }),
+          }
+        );
 
         const data = await response.json();
         if (data.success) {
@@ -117,7 +120,7 @@ export default {
 
       try {
         const response = await fetch(
-          "http://localhost/vault/getGoogleUser.php",
+          "https://www.thevaultldn.com/api/getGoogleUser.php",
           {
             method: "POST",
             headers: {

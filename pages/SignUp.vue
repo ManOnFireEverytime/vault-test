@@ -117,18 +117,21 @@ export default {
 
   methods: {
     async handleSignup() {
-      const response = await fetch("http://localhost/vault/signup.php", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          first_name: this.firstName,
-          last_name: this.lastName,
-          email: this.email,
-          password: this.password,
-        }),
-      });
+      const response = await fetch(
+        "https://www.thevaultldn.com/api/signup.php",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            first_name: this.firstName,
+            last_name: this.lastName,
+            email: this.email,
+            password: this.password,
+          }),
+        }
+      );
 
       const data = await response.json();
       if (data.success) {
@@ -142,7 +145,7 @@ export default {
     handleGoogleSignIn(googleUser) {
       const id_token = googleUser.credential;
 
-      fetch("http://localhost/vault/getGoogleUser.php", {
+      fetch("https://www.thevaultldn.com/api/getGoogleUser.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

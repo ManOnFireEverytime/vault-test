@@ -25,7 +25,9 @@ export const useProductStore = defineStore("product", {
     async fetchProducts() {
       this.loading = true;
       try {
-        const response = await fetch("http://localhost/vault/getProducts.php");
+        const response = await fetch(
+          "https://www.thevaultldn.com/api/getProducts.php"
+        );
         const result = await response.json();
         if (result.status === "success") {
           this.products = result.data.map((product) => ({
@@ -34,7 +36,7 @@ export const useProductStore = defineStore("product", {
             price: parseFloat(product.price),
             description: product.description,
             category: product.category,
-            image: `http://localhost/vault/products/${product.image1}`,
+            image: `https://www.thevaultldn.com/api/products/${product.image1}`,
             additionalImages: [
               product.image2,
               product.image3,
@@ -42,7 +44,7 @@ export const useProductStore = defineStore("product", {
               product.image5,
             ]
               .filter(Boolean)
-              .map((img) => `http://localhost/vault/products/${img}`),
+              .map((img) => `https://www.thevaultldn.com/api/products/${img}`),
             minRange: parseFloat(product.min_range),
             maxRange: parseFloat(product.max_range),
           }));
@@ -57,7 +59,7 @@ export const useProductStore = defineStore("product", {
     async fetchCategories() {
       try {
         const response = await fetch(
-          "http://localhost/vault/getCategories.php"
+          "https://www.thevaultldn.com/api/getCategories.php"
         );
         const result = await response.json();
         if (result.status === "success") {

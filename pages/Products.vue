@@ -75,14 +75,18 @@ export default {
     const activeTab = ref(-1); // Default to 'All' products view
 
     const fetchProducts = async () => {
-      const res = await fetch("http://localhost/vault/getAllProducts.php");
+      const res = await fetch(
+        "https://www.thevaultldn.com/api/getAllProducts.php"
+      );
       const json = await res.json();
       products.value = json.data;
       filteredProducts.value = json.data; // Initially show all products
     };
 
     const fetchCategories = async () => {
-      const res = await fetch("http://localhost/vault/getCategories.php");
+      const res = await fetch(
+        "https://www.thevaultldn.com/api/getCategories.php"
+      );
       const json = await res.json();
       categories.value = json.data;
     };
@@ -91,7 +95,7 @@ export default {
       activeTab.value = index;
       try {
         const res = await fetch(
-          `http://localhost/vault/getProductsByCategory.php?id=${categoryId}`
+          `https://www.thevaultldn.com/api/getProductsByCategory.php?id=${categoryId}`
         );
         const json = await res.json();
         if (json.status === "success") {

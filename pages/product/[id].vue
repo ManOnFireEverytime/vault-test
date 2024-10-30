@@ -72,7 +72,7 @@ export default {
   setup() {
     const product = ref(null);
     const route = useRoute();
-    const baseUrl = "http://localhost/vault/products/";
+    const baseUrl = "https://www.thevaultldn.com/api/products/";
 
     const getImageUrl = (imageName) => {
       if (!imageName) return null;
@@ -101,7 +101,7 @@ export default {
     const fetchProductDetails = async () => {
       try {
         const res = await fetch(
-          `http://localhost/vault/getProductById.php?id=${route.params.id}`
+          `https://www.thevaultldn.com/api/getProductById.php?id=${route.params.id}`
         );
 
         if (!res.ok) {
